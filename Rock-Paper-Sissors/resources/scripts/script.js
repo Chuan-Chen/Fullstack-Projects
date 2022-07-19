@@ -34,15 +34,12 @@ function computerPlay(){
 
 function findSign(num){
     if(num == 1){
-        return "rock";
+        return "✊";
     }else if(num == 2 ){
-        return "paper";
+        return "🖐️";
     }else if(num == 3){
-        return "scissor";
-    }else{
-        return "not valid";
+        return "✌️";
     }
-
 }
 function resetGame(){
     playerScore = 0;
@@ -74,7 +71,7 @@ function playRound(playerSelection, computerSelection){
         return string;
     }else{
         tie+=1;
-        winner = winner + " (" + tie + ")";
+        winner = playerChoice +  winner + " (" + tie + ")" + computerChoice;
         return winner;
     }
 }

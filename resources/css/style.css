@@ -57,4 +57,5 @@ body{
 
 .img:hover{
     background-color: #3a729b;
+    transition: translate(0px, 10px);
 }

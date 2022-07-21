@@ -10,6 +10,7 @@ body{
     margin: 0;
     background-color: #1b1b1b;
     color: aliceblue;
+    user-select: none;
 }
 
 
@@ -41,6 +42,7 @@ body{
     border-radius: 10px;
     text-align: end;
     font-size: calc(10vh);
+    user-select: text;
 }
 
 .display-text{
@@ -69,11 +71,18 @@ body{
     font-size: calc(8vh);
     transition: background-color;
     text-shadow: 0 0 3px aliceblue;
+    
 }
 
 .button:hover, .clear:hover, .back:hover{
     background-color: #3b3b3b;
     cursor: pointer;
+}
+
+.empty-button{
+    height: 8vh;
+    width: calc(8vh);
+    margin-right: auto;
 }
 
 .left-buttons, .right-buttons{

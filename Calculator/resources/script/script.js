@@ -79,7 +79,8 @@ function calculate(someArr){
                 array.splice(index-1,1);
             }
         }
-    return array;
+        array[0] = array[0].toPrecision(2);
+        return array;
 }
 
 function add(a,b){
@@ -123,6 +124,7 @@ function keyPress(e){
     }else if(e.keyCode == 32){
         reset(e);
     }else if(e.keyCode == 13){
+        currentOperations = reduce(currentOperations);
         currentOperations = calculate(currentOperations);
         display.textContent = "";
         updateDisplay();
@@ -134,6 +136,7 @@ function buttonClick(e){
     let key = e.path[0].attributes[1].value;
     if(key == "="){
         display.textContent = "";
+        currentOperations = reduce(currentOperations);
         currentOperations = calculate(currentOperations);
         updateDisplay();
     }else if(currentOperations.length == 0){
@@ -169,4 +172,4 @@ function init(){
 }
 
 
-//init();
+init();

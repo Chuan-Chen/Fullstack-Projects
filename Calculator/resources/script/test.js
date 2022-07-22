@@ -80,10 +80,7 @@ function calculate(someArr){
     }
     return array;
 }
-console.log(currentOperations);
-currentOperations = reduce(currentOperations);
 
-console.log(currentOperations);
-currentOperations = calculate(currentOperations)
-console.log(currentOperations);
+currentOperations = reduce(currentOperations);
+console.log(calculate(currentOperations));
 

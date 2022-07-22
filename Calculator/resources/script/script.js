@@ -49,9 +49,8 @@ function reduce(array){
     return a;
 }
 
-function calculate(e){
-    function calculate(someArr){
-        let array = someArr;
+function calculate(someArr){
+    let array = someArr;
         while(array.length != 1){
             let index = -1;
             if(findIndex("*") != -1){
@@ -80,8 +79,7 @@ function calculate(e){
                 array.splice(index-1,1);
             }
         }
-        return array;
-    }
+    return array;
 }
 
 function add(a,b){

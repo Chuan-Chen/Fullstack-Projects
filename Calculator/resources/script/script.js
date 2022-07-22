@@ -1,6 +1,5 @@
 const display = document.querySelector('.display-text');
-let currentOperations = [ ];
-let previousE = "";
+let currentOperations = [];
 let answer = 0;
 
 function updateDisplay(){
@@ -16,10 +15,12 @@ function reset(e){
     display.textContent = "";
     currentOperations = [];
     answer = 0;
+    console.log("reset");
 }
 function backSpace(e){
     display.textContent = display.textContent.slice(0,-1);
     currentOperations.pop();
+    console.log("backspace");
 }
 
 function findIndex(item){
@@ -62,42 +63,48 @@ function isSymbol(e){1
     return false;
 }
 
-// currentOperations[currentOperations.length-1] >= 0 && currentOperations[currentOperations.length-1] <=9 ||
-function keyPress(e){ 
-    if(e.key >= 0 && e.key <= 9 || e.key == '.' ||  e.key == '-' ||  e.key == '+' ||  e.key == '*' || e.key == '/'){
-        /**
-         let previousElement = currentOperations[currentOperations.length-1];
-        if(previousElement == '.' ||  previousElement == '-' ||  previousElement == '+' ||  previousElement== '*' || previousElement == '/'){
-            currentOperations[currentOperations.length-1] = e.key;
+function keyPress(e){
+    if(((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 97 && e.keyCode <= 105) || e.key == '.' ||  e.key == '-' ||  e.key == '+' ||  e.key == '*' || e.key == '/')){
+
+        if(currentOperations.length == 0){
+            currentOperations.push(`${e.key}`);
+            updateDisplay();
+        }else if(isSymbol(e.key) && isSymbol(currentOperations[currentOperations.length-1])){
+            currentOperations.pop();
+            currentOperations.push(`${e.key}`);
+            updateDisplay();
+        }else{
+            currentOperations.push(`${e.key}`);
             updateDisplay();
         }
 
-
-         */
-        previousE = e.key;
-        if(isSymbol(previousE) && currentOperations>=1){
-            currentOperations.pop();
-        }
-        currentOperations.push(`${e.key}`);
-        updateDisplay();
-    }else if(e.key == "Backspace"){
+    }else if(e.keyCode == 8){
         backSpace(e);
-    }else if(e.key == "Enter"){
+    }else if(e.keyCode == 32){
+        reset(e);
+    }else if(e.keyCode == 13){
         calculate();
     }
     console.log("press/clicked: " + e.key);
     console.log("current: " + currentOperations)
 }
-
 function buttonClick(e){
-    previousE = e.path[0].attributes[1].value;
-    if(e.path[0].attributes[1].value == "="){
+    let key = e.path[0].attributes[1].value;
+    if(key == "="){
         display.textContent = "";
         display.textContent = display.textContent + calculate(e);
-    }else{
-        currentOperations.push(`${e.path[0].attributes[1].value}`);
+    }else if(currentOperations.length == 0){
+        currentOperations.push(`${key}`);
         updateDisplay();
+    }else if(isSymbol(key) && isSymbol(currentOperations[currentOperations.length-1])){
+        currentOperations.pop();
+        currentOperations.push(`${key}`);
+        updateDisplay();
+    }else{
+        currentOperations.push(`${key}`);
+        updateDisplay(); 
     }
+    
     console.log("press/clicked: " + e.path[0].attributes[1].value);
     console.log("current: " + currentOperations);
 }

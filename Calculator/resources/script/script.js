@@ -32,27 +32,69 @@ function findIndex(item){
     return i;
 }
 
-function calculate(e){
-    let lastElement = currentOperations[currentOperations.length-1];
+function reduce(array){
+    let a = [];
+    let num = "0";
+    for(let i = 0; i < array.length; i++){
+        if(!isSymbol(array[i]) || array[i] == "."){
+            num+=String(array[i]);
+        }else{
+            a.push(num);
+            num = "";
+            a.push(array[i]);
+        }
+    }
+    a.push(num);
+    return a;
+}
 
-    if(currentOperations.length == 1){
-        return lastElement;
-    }else if(typeof(lastElement) != "number" && typeof(currentOperations[0] != "number")){
-        return null;
+function calculate(e){
+    function calculate(someArr){
+        let array = someArr;
+        while(array.length != 1){
+            let index = -1;
+            if(findIndex("*") != -1){
+                index = findIndex("*");
+                array[index] = multiply(parseFloat(array[index - 1]), parseFloat(array[index + 1]));
+                array.splice(index+1,1);
+                array.splice(index-1,1);
+            }else if(findIndex("/")!= -1){
+                index = findIndex("/");
+                if(array[index+1] == 0){
+                    array = ["Really?"];
+                }else{
+                    array[index] = divide(parseFloat(array[index - 1]), parseFloat(array[index + 1]));
+                    array.splice(index+1,1);
+                    array.splice(index-1,1);
+                }
+            }else if(findIndex("+") != -1) {
+                index = findIndex("+");
+                array[index] = add(parseFloat(array[index - 1]), parseFloat(array[index + 1]));
+                array.splice(index+1,1);
+                array.splice(index-1,1);
+            }else if(findIndex("-") != -1){
+                index = findIndex("-");
+                array[index] = subtract(parseFloat(array[index - 1]), parseFloat(array[index + 1]));
+                array.splice(index+1,1);
+                array.splice(index-1,1);
+            }
+        }
+        return array;
     }
 }
 
 function add(a,b){
-    return a + b;
+    return a+b;
 }
 function subtract(a,b){
-    return a - b;
+    return a-b;
 }
 function divide(a, b){
-    return (a / b).toPrecision(2);
+    return (a.toPrecision(2) / b.toPrecision(2));
 }
 function multiply(a, b){
-    return (a * b).toPrecision(2);
+    
+    return (a.toPrecision(2) * b.toPrecision(2));
 }
 
 function isSymbol(e){1

@@ -125,7 +125,9 @@ function keyPress(e){
     }else if(e.keyCode == 32){
         reset(e);
     }else if(e.keyCode == 13){
-        calculate();
+        currentOperations = calculate(currentOperations);
+        display.textContent = "";
+        updateDisplay();
     }
     console.log("press/clicked: " + e.key);
     console.log("current: " + currentOperations)
@@ -134,7 +136,8 @@ function buttonClick(e){
     let key = e.path[0].attributes[1].value;
     if(key == "="){
         display.textContent = "";
-        display.textContent = display.textContent + calculate(e);
+        currentOperations = calculate(currentOperations);
+        updateDisplay();
     }else if(currentOperations.length == 0){
         currentOperations.push(`${key}`);
         updateDisplay();

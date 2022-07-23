@@ -15,12 +15,12 @@ function reset(e){
     display.textContent = "";
     currentOperations = [];
     answer = 0;
-    console.log("reset");
+    //console.log("reset");
 }
 function backSpace(e){
     display.textContent = display.textContent.slice(0,-1);
     currentOperations.pop();
-    console.log("backspace");
+    //console.log("backspace");
 }
 
 function findIndex(item, array){
@@ -133,8 +133,8 @@ function keyPress(e){
         display.textContent = "";
         updateDisplay();
     }
-    console.log("press/clicked: " + e.key);
-    console.log("current: " + currentOperations)
+    //console.log("press/clicked: " + e.key);
+    //console.log("current: " + currentOperations)
 }
 function buttonClick(e){
     let key = e.path[0].attributes[1].value;
@@ -155,8 +155,8 @@ function buttonClick(e){
         updateDisplay(); 
     }
     
-    console.log("press/clicked: " + e.path[0].attributes[1].value);
-    console.log("current: " + currentOperations);
+    //console.log("press/clicked: " + e.path[0].attributes[1].value);
+    //console.log("current: " + currentOperations);
 }
 
 function init(){

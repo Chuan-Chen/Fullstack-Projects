@@ -23,9 +23,9 @@ function backSpace(e){
     console.log("backspace");
 }
 
-function findIndex(item){
+function findIndex(item, array){
     let i = -1;
-    currentOperations.find(function(search, index){
+    array.find(function(search, index){
         if(item == search){
             i = index;
         }
@@ -46,6 +46,9 @@ function reduce(array){
         }
     }
     a.push(num);
+
+
+
     return a;
 }
 
@@ -53,33 +56,34 @@ function calculate(someArr){
     let array = someArr;
         while(array.length != 1){
             let index = -1;
-            if(findIndex("*") != -1){
-                index = findIndex("*");
+            if(findIndex("*" , array) != -1){
+                index = findIndex("*", array);
                 array[index] = multiply(parseFloat(array[index - 1]), parseFloat(array[index + 1]));
                 array.splice(index+1,1);
                 array.splice(index-1,1);
-            }else if(findIndex("/")!= -1){
-                index = findIndex("/");
+            }else if(findIndex("/" , array)!= -1){
+                index = findIndex("/", array);
                 if(array[index+1] == 0){
                     array = ["Really?"];
+                    return array;
                 }else{
                     array[index] = divide(parseFloat(array[index - 1]), parseFloat(array[index + 1]));
                     array.splice(index+1,1);
                     array.splice(index-1,1);
                 }
-            }else if(findIndex("+") != -1) {
-                index = findIndex("+");
+            }else if(findIndex("+" , array) != -1) {
+                index = findIndex("+" ,array);
                 array[index] = add(parseFloat(array[index - 1]), parseFloat(array[index + 1]));
                 array.splice(index+1,1);
                 array.splice(index-1,1);
-            }else if(findIndex("-") != -1){
-                index = findIndex("-");
+            }else if(findIndex("-" , array) != -1){
+                index = findIndex("-" , array);
                 array[index] = subtract(parseFloat(array[index - 1]), parseFloat(array[index + 1]));
                 array.splice(index+1,1);
                 array.splice(index-1,1);
             }
         }
-        array[0] = array[0].toPrecision(2);
+        //currentOperations[0] = currentOperations[0].toFixed(2);
         return array;
 }
 
@@ -90,15 +94,16 @@ function subtract(a,b){
     return a-b;
 }
 function divide(a, b){
-    return (a.toPrecision(2) / b.toPrecision(2));
+    return (a / b).toFixed(2);
 }
 function multiply(a, b){
     
-    return (a.toPrecision(2) * b.toPrecision(2));
+    return (a * b).toFixed(2);
 }
 
-function isSymbol(e){1
-    if(e == '.' ||  e == '-' ||  e == '+' ||  e == '*' || e == '/'){
+function isSymbol(e){
+    //e == '.' ||
+    if(e == '-' ||  e == '+' ||  e == '*' || e == '/'){
         return true;
     }
     return false;
@@ -118,7 +123,6 @@ function keyPress(e){
             currentOperations.push(`${e.key}`);
             updateDisplay();
         }
-
     }else if(e.keyCode == 8){
         backSpace(e);
     }else if(e.keyCode == 32){
@@ -154,7 +158,6 @@ function buttonClick(e){
     console.log("press/clicked: " + e.path[0].attributes[1].value);
     console.log("current: " + currentOperations);
 }
-
 
 function init(){
     const btns = document.querySelectorAll(".button");

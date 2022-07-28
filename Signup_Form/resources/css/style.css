@@ -7,10 +7,10 @@ body{
     margin: 0;
     height: 100vh;
 }
-
-
 .main{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex:1;
     color:white;
     background-color: #a68d9c;
@@ -22,15 +22,6 @@ body{
     background-attachment: fixed;
     
 }
-
-.frosta::before{
-    width: 500px;
-    height: 500px;
-    background:inherit;
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-    filter: blur(10px);
-}
-
 
 
 
@@ -50,11 +41,6 @@ body{
     box-shadow: inset 0 0 2000px white;
     background-attachment: fixed;
 }
-
-
-
-
-
 .footer{
     background-color: #252526;
     width: 100%;
@@ -65,7 +51,6 @@ body{
     bottom: 0;
     color:white;
 }
-
 .footer-text{
     text-align: center;
     transform: translate(0, .5rem);
@@ -75,7 +60,6 @@ body{
     color: white;
     text-shadow: 0 0 10px white;
 }
-
 .footer a:hover{
     color: rgb(169, 169, 169)
 }

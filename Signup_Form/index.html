@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel = "stylesheet" href = "resources/css/style.css">
+    <script src = "resources/script/script.js" defer></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +12,49 @@
     <div class = "main">
         <div class = "banner">
         </div> 
-        <div class = 'content'>
-            <span class = "content-text"><span>Sign up for the annual </span> <span> sakura </span> <span>tree viewing</span></span>
-            <div class = "container"></div>
-            <div class = "signup-btn">Create Account</div>
-            <div>Already have an account?<a>login</a></div>
+        <div class = "content">
+            <div class = "text"><span class = "sakura">This</span> is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</div>
+            <div class = "text">You <em>know</em> you want to.</div>
+            <div class = "container">
+                <div class = "container-top"><div style = "font-size: large;">Lets do this!</div></div>
+                <div class = "container-bottom">
+                    <form id = "signup-form">
+                        <div class = "form-left">
+                            <div >
+                                <label for = "fname">FIRST NAME</label>
+                                <input type = "text" id = "fname" required>
+                            </div>
+                            <div>
+                                <label for = "email">EMAIL</label>
+                                <input type = "email", id = "email" required>
+                            </div>
+                            <div>
+                                <label for = "password">PASSWORD</label>
+                                <input type = "password" id = "password" required>
+                            </div>
+                        </div>
+    
+                       <div class = "form-right">
+                        <div>
+                            <label>LAST NAME</label>
+                            <input type = "text" id = "lname" required>
+                        </div>
+                        <div>
+                            <label>PHONE NUMBER</label>
+                            <input type = "text" id = "phoneNumber"required>
+                        </div>
+                        <div>
+                            <label>CONFIRM PASSWORD</label>
+                            <input type = "password" id = "confirmPassword" required>
+                        </div>
+                       </div>
+                       
+                    </form>
+                </div>
+                
+            </div>
+            <button class = "signup-btn" type = "submit" form = "signup-form">Create Account</button>
+            <div class = "text">Already have an account? <a href = "#">Log In</a></div>
         </div>
     </div>
 

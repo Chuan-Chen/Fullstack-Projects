@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container{
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.nav{
+    font-weight: 600;
+    font-size: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    grid-row: 1/3;
+    background-color: lightpink;
+}
+
+.nav ul{
+    display: grid;
+    grid-template-rows: repeat(auto-fit, min(50px, 10%));
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li{
+    gap: 8px;
+    display: grid;
+    align-self: center;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-flow: column;
+    cursor: pointer;
+}
+
+.nav li object{
+    justify-self: end;
+}
+
+.nav li:hover{
+    background-color: #cc919a;
+}
+
+.nav div:first-child{
+    display: flex; align-items: center;
+}
+
+
+.search{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+}
+/*
+.search-bar div{
+    text-align: center;
+    width: 80%;
+    border-radius: 50px;
+    border: none;
+    height: fit-content;
+    background-color: #c0c6cc;
+}
+*/
+.search-area{
+    text-align: center;
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    height: 2rem;
+    background-color: #c0c6cc;
+}
+
+.search-area:focus{
+    outline: none;
+}
+
+.search-bar{
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.user-profile{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 15px;
+    align-self: center;
+    justify-self: end;
+}
+
+.user-profile img{
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.user{
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.projects{
+
+    background-color: lightslategray;
+}
+
+
+
+.footer{
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: min(40px, 50vh);
+    font-size: .8rem;
+    left: 0;
+    bottom: 0;
+    color:white;
+    justify-content: center;
+    align-items: center;
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+.footer a:hover{
+    color: rgb(169, 169, 169)
+}

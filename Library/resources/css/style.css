@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+body{
+    display: flex;
+    height: 100vh;
+    font-family: 'Kanit', sans-serif;
+    flex-direction: column;
+    margin: 0;
+}
+
+.container{
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    background-color: #c17542;
+    display: grid;
+    grid-template-areas: 
+    "control content content"
+    "control content content"
+    "control content content";
+}
+
+.control{
+    grid-area: control;
+    background-color: #5b371e;
+    box-shadow: 10px 0px 5px #82502c;
+}
+
+.control-title{
+    font-size: 3rem;
+    border-bottom: solid #d2a56d;
+}
+
+.control-btns{
+    display: grid;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btns div{
+    user-select: none;
+    background-color: #8e5630;
+    border-radius: 9px;
+    font-size: 1rem;
+}
+
+.control-btns div:hover{
+
+    cursor: pointer;
+    background-color: #814e2a;
+}
+
+.content{
+    grid-area: stuff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2rem;
+    background-color: #8e5630;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+
+.footer a:hover{
+    color: rgb(169, 169, 169)
+}
+
+@media(max-width: 700px){
+    .container{
+        grid-template-areas: 
+        "control";
+        
+    }
+}

@@ -20,7 +20,8 @@ body{
 }
 
 .control{
-    grid-area: control;
+    grid-column: 1 / 2;
+    grid-row: 1 / 6;
     background-color: #5b371e;
     box-shadow: 10px 0px 5px #82502c;
 }
@@ -51,7 +52,11 @@ body{
 }
 
 .content{
-    grid-area: stuff;
+    gap: 15px;
+    grid-row: 1 / 6;
+    grid-column: 2 / 4;
+    height: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
@@ -77,8 +82,17 @@ body{
 
 @media(max-width: 700px){
     .container{
-        grid-template-areas: 
-        "control";
+
         
     }
+    .control{
+        grid-column: 1 / 6;
+        grid-row: 1/2;
+    }
+}
+
+.book{
+    max-width: 150px;
+    max-height: 300px;
+    background-color: white;
 }

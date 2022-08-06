@@ -9,7 +9,33 @@
     <title>Library</title>
 </head>
 <body>
-    
+    <div id = "modal" class = "modal">
+        <div class = "modal-content">
+            <div class = "modal-close" onclick="updateModal()"><object data = "resources/images/close.svg"></object></div>
+            <form class = "book-info" id = "book-info">
+                <div>
+                    <label>Book Title</label>
+                    <input type = "text" name = "title" id = "title">
+                </div>
+                <div>
+                    <label>Author</label>
+                    <input type = "text" name = "author" id = "author">
+                </div>
+                <div>
+                    <label>Pages</label>
+                    <input type = "number" name = "pages" id = "pages">
+                </div>
+                <div>
+                    <label>Read</label>
+                    <input type = "checkbox" name = "read" id = "read">
+                </div>
+                <input type = "reset" value = "reset">
+                <div class = "modify-modal">Modify</div>
+                <div class = "submit" type = "submit">Submit</div>
+            </form>
+        </div>
+        <div class = "modal-background" onclick="updateModal()"></div>
+    </div>
     <div class = "container">
         <div class = "control">
             <div class = "control-title">Library</div>

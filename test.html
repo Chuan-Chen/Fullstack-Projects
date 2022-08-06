@@ -10,39 +10,65 @@
             margin: 0;
             height: 100vh;
         }
-
-        .container{
-            display: grid;
-            background-color: grey;
-            grid-gap: 10px;
-            grid-template-areas: 
-            "item item item item"
-            "para para para para"
-            "para para para para";
-            height: 100%;
-            width: 100%;
+        .display{
+            display: none;
         }
-        .item{
-            grid-area: item;
-            background-color: orange;
+        .content{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 1;
         }
-
-        @media(max-width: 700px) {
-            .container{
-                grid-template-areas: 
-                "item para para"
-                "item para para"
-                ;
-            }
+        #btn{
+            background-color: black;
+            width: 400px;
+            height: 100px;
         }
-
+        .content-background{
+            z-index: 0;
+            top: 0;
+            left: 0;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+        }
     </style>
+
 </head>
 <body>
-    <div class = "container">
-        <div class = "item">1</div>
-
+    <div id = "btn" onclick = updateModal()></div>
+    <div id = "display" class = "display">
+        
+            <div class = "content">
+                <input type = "text">
+                <button class = "close-btn" onclick = updateModal()></button>
+            </div>
+            <div class = "content-background" onclick = updateModal()></div>
 
     </div>
+
 </body>
+<script>
+    let toggle = false;
+    
+    const content = document.querySelector("#display");
+
+
+    function updateModal(){
+        if(toggle){
+            content.classList.remove("display");
+            toggle = !toggle;
+        }else{
+            content.classList.add("display");
+            toggle = !toggle;
+        }
+    }
+
+
+
+
+</script>
 </html>

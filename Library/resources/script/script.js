@@ -3,6 +3,8 @@ let removeMode = false;
 let modifyMode = false;
 
 let modalToggle = true;
+
+let lastClicked = -1;
 const modal = document.querySelector("#modal");
 const content = document.querySelector(".content");
 const bookInfo = document.querySelector("#book-info");
@@ -33,20 +35,21 @@ function updateModal(){
 
 
 function clickedBook(){
-  /**    if(removeMode){
-        book.remove();
-        myLibrary.pop();
-    }else if(modifyMode){
-        let thisbook = myLibrary[this.dataset.index];
+    lastClicked = this.dataset.index;
+    if(removeMode && !modifyMode){
+        this.remove();
+        myLibrary.splice(this.dataset.index, 1);
+    }else if(modifyMode && !removeMode){
+        let thisbook = myLibrary[this.dataset.index]
         bookInfo.title.value = thisbook.title;
         bookInfo.author.value = thisbook.author;
         bookInfo.pages.value = thisbook.pages;
-        if(thisbook.read == "has read"){
+        if(thisbook.read === "has read"){
             bookInfo.read.checked = true;
         }
         updateModal();
-    } */
-    console.log(this);
+    }
+    console.log();
 
 }
 
@@ -68,13 +71,34 @@ function createBook(title, author, pages, read){
 }
 
 
+function resetModal(){
+    bookInfo.title.value = "";
+    bookInfo.pages.value = "";
+    bookInfo.author.value = "";
+    bookInfo.read.checked = false;
+}
 
-const addBtn = document.querySelector(".add").addEventListener("click", updateModal);
+function updateBook(index){
+    let book = myLibrary[index];
+    let bookDiv = book.book;
+    bookDiv.getElementsByTagName('div')[0].textContent = book.title;
+    bookDiv.getElementsByTagName('div')[1].textContent = book.author;
+    bookDiv.getElementsByTagName('div')[2].textContent = book.pages;
+    bookDiv.getElementsByTagName('div')[3].textContent = book.read;
+}
+    
+
+
+const addBtn = document.querySelector(".add").addEventListener("click", function(e){
+    if(modifyMode) return;
+    resetModal();
+    submit.classList.remove("display");
+    modalModfiy.classList.add("display");
+    updateModal();
+});
 
 const removeBtn = document.querySelector(".remove").addEventListener("click", function(e){
-    if(!modifyMode){
-        removeMode = !removeMode;
-    }
+    removeMode = !removeMode;
     if(removeMode && !modifyMode){
         this.classList.add("mode");
     }else{
@@ -82,6 +106,10 @@ const removeBtn = document.querySelector(".remove").addEventListener("click", fu
     }
 });
 const modifyBtn = document.querySelector(".modify").addEventListener("click", function(e){
+
+    submit.classList.add("display");
+    modalModfiy.classList.remove("display");
+
     if(!removeMode){
         modifyMode = !modifyMode;
     }
@@ -99,10 +127,8 @@ window.document.addEventListener("keydown", (e) => {
     }
     
 });
-
-
-const submit = document.querySelector(".submit").addEventListener("click", function(e){
-    
+const submit = document.querySelector(".submit");
+submit.addEventListener("click", function(e){
     let read = bookInfo.read.checked;
     if(read){
         read = "has read";
@@ -110,5 +136,22 @@ const submit = document.querySelector(".submit").addEventListener("click", funct
         read = "not read";
     }
     createBook(bookInfo.title.value, bookInfo.author.value, bookInfo.pages.value, read);
+    resetModal();
+    updateModal();
+});
+
+const modalModfiy = document.querySelector(".modify-modal")
+modalModfiy.addEventListener("click", function(e){
+    console.log();
+    let book = myLibrary[lastClicked];
+    book.title = bookInfo.title.value;
+    book.author = bookInfo.author.value;
+    book.pages = bookInfo.pages.value;
+    if(bookInfo.read.checked === true){
+        book.read = "has read";
+    }else{
+        book.read = "not read";
+    }
+    updateBook(lastClicked);
     updateModal();
 });

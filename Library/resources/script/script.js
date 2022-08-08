@@ -53,7 +53,6 @@ function clickedBook(){
 
 }
 
-
 function createBook(title, author, pages, read){
     const book = document.createElement("div");
     const bookDescriptions = [];
@@ -98,7 +97,9 @@ const addBtn = document.querySelector(".add").addEventListener("click", function
 });
 
 const removeBtn = document.querySelector(".remove").addEventListener("click", function(e){
-    removeMode = !removeMode;
+    if(!modifyMode){
+        removeMode = !removeMode;
+    }
     if(removeMode && !modifyMode){
         this.classList.add("mode");
     }else{

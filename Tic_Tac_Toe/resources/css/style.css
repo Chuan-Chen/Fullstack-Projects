@@ -78,6 +78,7 @@ body{
 }
 
 .menu-items{
+    gap: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,3 +86,12 @@ body{
     align-items: center;
 }
 
+input{
+    border-radius: 5px;
+    height: 30px;
+    text-align: center;
+    border: none;
+}
+input:focus{
+    outline: none;
+}

@@ -13,14 +13,14 @@
             this.initGameBoard(3);
             this.bindEvent();
             this.render();
-            //console.log(this.gameArea.children);
+
         },
         cache: function(){
             this.gameArea = document.querySelector(".gameBoard");
             this.gameB = document.querySelector(".game");
             this.player1 = document.querySelector(".player1");
             this.player2 = document.querySelector(".player2");
-            
+            this.startMenu = document.querySelector(".start-screen");
         },
         bindEvent: function(){
             this.gameBoard.forEach(e =>{
@@ -28,6 +28,11 @@
                     element.div.addEventListener("click",   this.buttonClick.bind(this));
                 });
             })
+            let start = this.startMenu;
+            this.startMenu.children[0].children[0].addEventListener('click', function(e){
+                start.classList.add("no-display");
+                
+            });
         },
         render: function(){
             this.gameBoard.forEach(e => {

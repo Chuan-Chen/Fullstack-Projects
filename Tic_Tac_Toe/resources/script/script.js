@@ -7,7 +7,7 @@
     let Game = {
         playerTurn: true,
         gameBoard: [],
-        players:[],
+        players: [],
         init: function(){
             this.cache();
             this.initGameBoard(3);
@@ -29,9 +29,25 @@
                 });
             })
             let start = this.startMenu;
-            this.startMenu.children[0].children[0].addEventListener('click', function(e){
-                start.classList.add("no-display");
-                
+            let players = this.players;
+            let player1 = this.player1;
+            let player2 = this.player2;
+            start.children[0].children[0].addEventListener('click', function(e){
+                if(player1.value != "" && player2.value != ""){
+                    start.classList.add("no-display");
+                    players.push({player: player1.value, score: 0});
+                    players.push({player: player2.value, score: 0});
+                }
+            });
+            player1.addEventListener("keyup", function(e){
+                if(player1.value != ""){
+                    player1.classList.remove("invalid-border");
+                }
+            });
+            player2.addEventListener("keyup", function(e){
+                if(player2.value != ""){
+                    player2.classList.remove("invalid-border");
+                }
             });
         },
         render: function(){

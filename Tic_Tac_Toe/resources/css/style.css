@@ -95,3 +95,7 @@ input{
 input:focus{
     outline: none;
 }
+
+.invalid-border{
+    border: rgb(255, 107, 107) 1px solid;
+}

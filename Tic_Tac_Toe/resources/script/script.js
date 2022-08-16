@@ -67,7 +67,7 @@
             let j = e.path[0].classList[1].charAt(1);
             this.playerTurn = !this.playerTurn;
             this.gameBoard[i][j].value = this.playerTurn;
-            console.log(this.gameBoard[i][j].value);
+            console.log(i, j);
             this.render();
         },
         initGameBoard: function(size){

@@ -88,13 +88,18 @@
             if(this.checkBoard(this.gameBoard, i, j)){
                 this.players[+ this.playerTurn].score++;
                 this.resetBoard();
+                return;
             }
-            this.counter++;
+
+            
+            this.render();
+            this.counter = this.counter + 1;
             if(this.counter == 9){
+                this.counter = 0;
+                console.clear();
                 this.resetBoard();
             }
             console.log(this.counter);
-            this.render();
         },
         initGameBoard: function(size){
             for(let i = 0; i < size; i++){

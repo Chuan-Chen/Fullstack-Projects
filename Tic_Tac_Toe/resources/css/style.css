@@ -9,10 +9,11 @@ body{
     align-items: center;
 
 
-
 }
 
 .game{
+
+    grid-column: 2 / 4;
     display: grid;
     gap: 3px;
     grid-template-columns: repeat(3, 20vh);
@@ -98,4 +99,17 @@ input:focus{
 
 .invalid-border{
     border: rgb(255, 107, 107) 1px solid;
+}
+
+.player-display{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+}
+
+.player1-display, .player2-display{
+    font-size: 2rem;
+    font-weight: bold;
 }

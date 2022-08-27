@@ -1,14 +1,16 @@
-let board = [[0, 0, 2],
-             [2, 0, 0], 
-             [2, 2, 0]];
-let size = board.length;
+let user = function(name){
+    this.users = [];
+    this.users.push(name);
+    this.print = function(){
+        console.log(this.users);
+    }
+    this.add = function(name){
+        this.users.push(name);
+    }
+}
 
-let yes = [0,0,0];
+let usernames = new user("John Smith");
 
-
-
-
-// 141833794472
-// pin - 6262
-
-console.log(checkBoard(board, 1, 1));
+usernames.print();
+usernames.add("John Cena");
+usernames.print();

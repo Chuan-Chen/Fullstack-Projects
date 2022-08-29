@@ -1,0 +1,6 @@
+#content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 8fr;
+    font-size: 100px;
+}

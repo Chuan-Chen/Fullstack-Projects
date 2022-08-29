@@ -7,5 +7,9 @@ module.exports = {
         filename: "main.js",
         path: resolve(__dirname, "dist"),
     },
+    mode: "development",
+    module: {
+       rules: [{test: /\.css$/, use: [{loader: "style-loader", options: {injectType: "linkTag"}}, {loader: "file-loader"}] }]
+    },
 
 }

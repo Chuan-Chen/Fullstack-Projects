@@ -9,4 +9,5 @@ import {contact} from "./contact.js";
 
 
 const mainBody = document.querySelector("#content");
+createMenu(mainBody);
 console.log(mainBody)

@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+#content{
+    font-family: 'Roboto Mono', monospace;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 800px;
+    font-size: 100px;
+}

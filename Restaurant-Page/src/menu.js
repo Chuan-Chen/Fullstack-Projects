@@ -1,7 +1,21 @@
-let menu = document.createElement("div").classList.add("menu");
+
 
 
 export function createMenu(mainBody){
-    mainBody.append(menu);
-    console.log("worked");
+    let a = [];
+    let Home = document.createElement("div");
+    let Menu = document.createElement("div");
+    let Contact = document.createElement("div");
+    
+    a.push({"home": Home});
+    a.push({"menu": Menu});
+    a.push({"contact": Contact});
+    
+    a.forEach(e =>{
+        let name = Object.getOwnPropertyNames(e);
+        console.log(name)
+    });
+
+
+    return a;
 }

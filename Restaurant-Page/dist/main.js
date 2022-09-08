@@ -53,26 +53,6 @@ eval("\n\nvar memo = {};\n/* istanbul ignore next  */\n\nfunction getTarget(targ
 
 /***/ }),
 
-/***/ "./src/contact.js":
-/*!************************!*\
-  !*** ./src/contact.js ***!
-  \************************/
-/***/ (() => {
-
-eval("\n\n//# sourceURL=webpack://restaurant-page/./src/contact.js?");
-
-/***/ }),
-
-/***/ "./src/content.js":
-/*!************************!*\
-  !*** ./src/content.js ***!
-  \************************/
-/***/ (() => {
-
-eval("\n\n//# sourceURL=webpack://restaurant-page/./src/content.js?");
-
-/***/ }),
-
 /***/ "./src/delete.js":
 /*!***********************!*\
   !*** ./src/delete.js ***!
@@ -90,7 +70,7 @@ eval("\n\n//# sourceURL=webpack://restaurant-page/./src/delete.js?");
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./delete.js */ \"./src/delete.js\");\n/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_delete_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _content_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./content.js */ \"./src/content.js\");\n/* harmony import */ var _content_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_content_js__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_contact_js__WEBPACK_IMPORTED_MODULE_4__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst mainBody = document.querySelector(\"#content\");\r\n(0,_menu_js__WEBPACK_IMPORTED_MODULE_2__.createMenu)(mainBody);\r\nconsole.log(mainBody)\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./delete.js */ \"./src/delete.js\");\n/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_delete_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n\r\n\r\n\r\n\r\n\r\nlet pages = [];\r\n\r\n\r\n\r\nconst mainBody = document.querySelector(\"#content\");\r\npages.push((0,_menu_js__WEBPACK_IMPORTED_MODULE_2__.createMenu)(mainBody));\r\n\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ }),
 
@@ -101,7 +81,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createMenu\": () => (/* binding */ createMenu)\n/* harmony export */ });\nlet menu = document.createElement(\"div\").classList.add(\"menu\");\r\n\r\n\r\nfunction createMenu(mainBody){\r\n    mainBody.append(menu);\r\n    console.log(\"worked\");\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createMenu\": () => (/* binding */ createMenu)\n/* harmony export */ });\n\r\n\r\n\r\nfunction createMenu(mainBody){\r\n    let a = [];\r\n    let Home = document.createElement(\"div\");\r\n    let Menu = document.createElement(\"div\");\r\n    let Contact = document.createElement(\"div\");\r\n    \r\n    a.push({\"home\": Home});\r\n    a.push({\"menu\": Menu});\r\n    a.push({\"contact\": Contact});\r\n    \r\n    a.forEach(e =>{\r\n        let name = Object.getOwnPropertyNames(e);\r\n        console.log(name)\r\n    });\r\n\r\n\r\n    return a;\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
 
 /***/ })
 

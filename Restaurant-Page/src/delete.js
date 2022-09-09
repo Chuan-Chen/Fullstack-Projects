@@ -1,5 +1,5 @@
 export function clear(content){
-    content.innerHTML = "";
+    content.textContent = "";
     console.log("Cleared data")
-    
+
 }

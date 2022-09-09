@@ -16,7 +16,7 @@
   \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"58c4b0903dd31e3875160c0a8cc335f2.css\");\n\n//# sourceURL=webpack://restaurant-page/./src/style.css?./node_modules/file-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"8cf0479f748ca030da9392b900f90b42.css\");\n\n//# sourceURL=webpack://restaurant-page/./src/style.css?./node_modules/file-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -66,7 +66,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"clear\": () => (/* binding */ clear)\n/* harmony export */ });\nfunction clear(content){\r\n    content.innerHTML = \"\";\r\n    console.log(\"Cleared data\")\r\n    \r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/delete.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"clear\": () => (/* binding */ clear)\n/* harmony export */ });\nfunction clear(content){\r\n    content.textContent = \"\";\r\n    console.log(\"Cleared data\")\r\n\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/delete.js?");
 
 /***/ }),
 

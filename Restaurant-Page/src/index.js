@@ -1,12 +1,6 @@
 import styles from "./style.css";
-import {clear} from "./delete.js"
-import {createMenu} from "./menu.js";
-import {content} from "./content.js";
-import {contact} from "./contact.js";
-
-
+import {clear} from "./delete.js";
+import {createHeader} from './header.js';
 
 const mainBody = document.querySelector("#content");
-createMenu(mainBody);
-
-
+const header = createHeader(mainBody);

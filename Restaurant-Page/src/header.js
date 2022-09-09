@@ -5,21 +5,26 @@ import {createContact} from "./contact.js";
 
 export function createHeader(mainBody){
     let a = [];
-
     const home = document.createElement("div");
     home.classList.add("home");
     home.textContent = "Home";
-    home.addEventListener("click", createHome);
+    home.addEventListener("click", () => {
+        createHome(mainBody);
+    });
 
     const menu = document.createElement("div");
     menu.textContent = "Menu";
     menu.classList.add("menu");
-    menu.addEventListener("click", createMenu)
+    menu.addEventListener("click", () => {
+        createMenu(mainBody);
+    })
 
     const contact = document.createElement("div");
     contact.classList.add("contact");
     contact.textContent = "Contact";
-    contact.addEventListener("click", createContact);
+    contact.addEventListener("click", () => {
+        createContact(mainBody);
+    });
 
     a.push(home);
     a.push(menu);
@@ -29,6 +34,7 @@ export function createHeader(mainBody){
         mainBody.append(e);
     });
 
+    
 
 
     return a;

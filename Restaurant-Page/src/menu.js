@@ -1,8 +1,20 @@
-let menu;
+
+let menuBtn = [];
 
 export function createMenu(mainBody){
     menu = document.createElement("div");
-    menu.textContent = "hi";
-    mainBody.append(menu);
+    content = document.createElement("div");
+    contact = document.createElement("div");
+
+
+    menuBtn.push(menu);
+    menuBtn.push(content);
+    menuBtn.push(contact);
+
+    menuBtn.forEach(e => {
+        console.log(e);
+    })
+    
+
     console.log("worked");
 }

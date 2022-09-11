@@ -5,6 +5,10 @@ import {createContact} from "./contact.js";
 
 export function createHeader(mainBody){
     let a = [];
+
+    const header = document.createElement("div");
+    header.classList.add("header");
+
     const home = document.createElement("div");
     home.classList.add("home");
     home.textContent = "Home";
@@ -31,11 +35,10 @@ export function createHeader(mainBody){
     a.push(contact);
 
     a.forEach(e =>{
-        mainBody.append(e);
+        header.append(e);
     });
 
-    
-
+    mainBody.append(header);
 
     return a;
 }

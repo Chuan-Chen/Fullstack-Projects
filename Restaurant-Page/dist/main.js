@@ -16,7 +16,7 @@
   \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"8cf0479f748ca030da9392b900f90b42.css\");\n\n//# sourceURL=webpack://restaurant-page/./src/style.css?./node_modules/file-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"398d8e7635d29f083cb1fce93ae1585e.css\");\n\n//# sourceURL=webpack://restaurant-page/./src/style.css?./node_modules/file-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -56,7 +56,7 @@ eval("\n\nvar memo = {};\n/* istanbul ignore next  */\n\nfunction getTarget(targ
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createContact\": () => (/* binding */ createContact)\n/* harmony export */ });\n/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./delete.js */ \"./src/delete.js\");\n\r\nfunction createContact(mainBody){\r\n    let content = mainBody.children[3]\r\n    ;(0,_delete_js__WEBPACK_IMPORTED_MODULE_0__.clear)(content);\r\n    console.log('creating Contact');\r\n    content.textContent = \"contact\";\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/contact.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createContact\": () => (/* binding */ createContact)\n/* harmony export */ });\n/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./delete.js */ \"./src/delete.js\");\n\r\nfunction createContact(mainBody){\r\n    let content = mainBody.children[1]\r\n    ;(0,_delete_js__WEBPACK_IMPORTED_MODULE_0__.clear)(content);\r\n    console.log('creating Contact');\r\n    content.textContent = \"contact\";\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/contact.js?");
 
 /***/ }),
 
@@ -66,7 +66,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"clear\": () => (/* binding */ clear)\n/* harmony export */ });\nfunction clear(content){\r\n    content.textContent = \"\";\r\n    console.log(\"Cleared data\")\r\n\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/delete.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"clear\": () => (/* binding */ clear)\n/* harmony export */ });\nfunction clear(content){\r\n    \r\n    content.textContent = \"\";\r\n    console.log(\"Cleared data\")\r\n\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/delete.js?");
 
 /***/ }),
 
@@ -76,7 +76,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createHeader\": () => (/* binding */ createHeader)\n/* harmony export */ });\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n\r\n\r\n\r\n\r\n\r\nfunction createHeader(mainBody){\r\n    let a = [];\r\n    const home = document.createElement(\"div\");\r\n    home.classList.add(\"home\");\r\n    home.textContent = \"Home\";\r\n    home.addEventListener(\"click\", () => {\r\n        (0,_home_js__WEBPACK_IMPORTED_MODULE_0__.createHome)(mainBody);\r\n    });\r\n\r\n    const menu = document.createElement(\"div\");\r\n    menu.textContent = \"Menu\";\r\n    menu.classList.add(\"menu\");\r\n    menu.addEventListener(\"click\", () => {\r\n        (0,_menu_js__WEBPACK_IMPORTED_MODULE_1__.createMenu)(mainBody);\r\n    })\r\n\r\n    const contact = document.createElement(\"div\");\r\n    contact.classList.add(\"contact\");\r\n    contact.textContent = \"Contact\";\r\n    contact.addEventListener(\"click\", () => {\r\n        (0,_contact_js__WEBPACK_IMPORTED_MODULE_2__.createContact)(mainBody);\r\n    });\r\n\r\n    a.push(home);\r\n    a.push(menu);\r\n    a.push(contact);\r\n\r\n    a.forEach(e =>{\r\n        mainBody.append(e);\r\n    });\r\n\r\n    \r\n\r\n\r\n    return a;\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createHeader\": () => (/* binding */ createHeader)\n/* harmony export */ });\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n\r\n\r\n\r\n\r\n\r\nfunction createHeader(mainBody){\r\n    let a = [];\r\n\r\n    const header = document.createElement(\"div\");\r\n    header.classList.add(\"header\");\r\n\r\n    const home = document.createElement(\"div\");\r\n    home.classList.add(\"home\");\r\n    home.textContent = \"Home\";\r\n    home.addEventListener(\"click\", () => {\r\n        (0,_home_js__WEBPACK_IMPORTED_MODULE_0__.createHome)(mainBody);\r\n    });\r\n\r\n    const menu = document.createElement(\"div\");\r\n    menu.textContent = \"Menu\";\r\n    menu.classList.add(\"menu\");\r\n    menu.addEventListener(\"click\", () => {\r\n        (0,_menu_js__WEBPACK_IMPORTED_MODULE_1__.createMenu)(mainBody);\r\n    })\r\n\r\n    const contact = document.createElement(\"div\");\r\n    contact.classList.add(\"contact\");\r\n    contact.textContent = \"Contact\";\r\n    contact.addEventListener(\"click\", () => {\r\n        (0,_contact_js__WEBPACK_IMPORTED_MODULE_2__.createContact)(mainBody);\r\n    });\r\n\r\n    a.push(home);\r\n    a.push(menu);\r\n    a.push(contact);\r\n\r\n    a.forEach(e =>{\r\n        header.append(e);\r\n    });\r\n\r\n    mainBody.append(header);\r\n\r\n    return a;\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/header.js?");
 
 /***/ }),
 
@@ -86,7 +86,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createHome\": () => (/* binding */ createHome)\n/* harmony export */ });\n/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./delete.js */ \"./src/delete.js\");\n\r\nfunction createHome(mainBody){\r\n    let content = mainBody.children[3]\r\n    ;(0,_delete_js__WEBPACK_IMPORTED_MODULE_0__.clear)(content);\r\n    console.log('creating home');\r\n    content.textContent = \"Home\";\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createHome\": () => (/* binding */ createHome)\n/* harmony export */ });\n/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./delete.js */ \"./src/delete.js\");\n\r\nfunction createHome(mainBody){\r\n    let content = mainBody.children[1]\r\n    ;(0,_delete_js__WEBPACK_IMPORTED_MODULE_0__.clear)(content);\r\n    console.log('creating home');\r\n    content.textContent = \"Home\";\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/home.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createMenu\": () => (/* binding */ createMenu)\n/* harmony export */ });\n/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./delete.js */ \"./src/delete.js\");\n\r\n\r\nfunction createMenu(mainBody){\r\n    let content = mainBody.children[3]\r\n    ;(0,_delete_js__WEBPACK_IMPORTED_MODULE_0__.clear)(content);\r\n    console.log('creating menu');\r\n    content.textContent = \"menu\";\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createMenu\": () => (/* binding */ createMenu)\n/* harmony export */ });\n/* harmony import */ var _delete_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./delete.js */ \"./src/delete.js\");\n\r\n\r\nfunction createMenu(mainBody){\r\n    let content = mainBody.children[1]\r\n    ;(0,_delete_js__WEBPACK_IMPORTED_MODULE_0__.clear)(content);\r\n    console.log('creating menu');\r\n    content.textContent = \"menu\";\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
 
 /***/ })
 

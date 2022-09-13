@@ -1,18 +1,28 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 body{
     margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 100vh;
+    background: #577590;
 }
 
+.header{
+    height: 4rem;
+    background-color: #D78A76;
+}
 
+.btn{
+    background-color: #797979;
+}
 
 .footer{
     display: flex;
+    background-color: #D78A76;
     flex-direction: column;
-    gap: 15px;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-bottom: 15px;
+    height: 4rem;
     flex-grow: 0;
 }
 

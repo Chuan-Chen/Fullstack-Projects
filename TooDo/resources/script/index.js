@@ -18,7 +18,5 @@ class Projects{
     }
 }
 
-
-
-let p1 = new Projects('default');
-console.log(p1);
+const todo = document.querySelector("todos")
+console.lo

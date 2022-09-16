@@ -4,7 +4,8 @@ const countryDiv = document.querySelector("#country");
 
 
 async function getAddress(ip){
-    let response =  await fetch(`https://ipapi.co/${ip}/json/`).then(res => res.json()).then((data)=> {
+    let apiURL = `https://ipapi.co/${ip}/json/`;
+    let response =  await fetch(apiURL).then(res => res.json()).then((data)=> {
         countryDiv.textContent = data.country_name + ", " + data.city + " " + data.region;
     });
 };

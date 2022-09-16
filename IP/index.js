@@ -17,4 +17,4 @@ async function getIP(url){
     return response;
 }
 
-getIP("https://ip.seeip.org/json")
+getIP("https://ip.seeip.org/json");

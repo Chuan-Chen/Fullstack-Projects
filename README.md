@@ -10,5 +10,4 @@
 - <a href = "https://chuan-chen.github.io/Fullstack-Projects/Library/index.html">Library</a>
 - <a href = "https://chuan-chen.github.io/Fullstack-Projects/Signup_Form/index.html">Signup Form</a>
 - <a href = "https://chuan-chen.github.io/Fullstack-Projects/IP/index.html">IP finder</a>
-<a href = "https://chuan-chen.github.io/Fullstack-Projects/Restaurant-Page/dist/index.html">Restaurant-Page</a>
-- <a href = "">Restaurant Page</a>
+- <a href = "https://chuan-chen.github.io/Fullstack-Projects/Restaurant-Page/dist/index.html">Restaurant-Page</a>

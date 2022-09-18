@@ -23,6 +23,7 @@ body{
     'sidebar content content content content'
     'sidebar content content content content';
     min-height: 100vh;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .sidebar{
@@ -104,6 +105,8 @@ input:focus{
 
 @media(max-width: 900px){
     .container{
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
         grid-template-areas: 
         'sidebar sidebar'
         'content content'

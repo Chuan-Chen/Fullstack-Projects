@@ -1,28 +1,15 @@
+import {Clock} from './clock.js';
+const time = document.querySelector(".time");
 
-(()=>{
-    getCoords();
-    clock();
-})();
-
-function clock(){
-    const currentTime = new Date();
-    const time = document.querySelector(".time");
-    time.textContent = 
-    `${pad(currentTime.getMonth()+1)}/${pad(currentTime.getDate())}  
-     ${pad(convert24Hour(currentTime.getHours()))}:${pad(currentTime.getMinutes())}:${pad(currentTime.getSeconds())}`;
-    setTimeout(clock, 1000);
-};
+const clock = new Clock(time);
+clock.init();
 
 
-function pad(n){
-    if(n < 10) return `0${n}`;
-    return n;
-}
+getCoords();
 
-function convert24Hour(n){
-    if(n > 12) return n - 12;
-    return n;
-}
+
+
+
 
 async function getCoords(){
     if(!navigator.geolocation){
@@ -36,6 +23,5 @@ async function getCoords(){
     }, (err)=>{console.log(err)});
     return coords
 }
-
 
 

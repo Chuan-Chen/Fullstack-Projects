@@ -1,0 +1,24 @@
+{
+  "name": "js-html_projects",
+  "version": "1.0.0",
+  "description": "Personal Projects created for <a href = \"https://nauhc.dev\" >portfolio</a>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chuan-Chen/Fullstack-Projects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chuan-Chen/Fullstack-Projects/issues"
+  },
+  "homepage": "https://github.com/Chuan-Chen/Fullstack-Projects#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

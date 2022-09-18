@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Sans+Pro&display=swap');
+
+::-webkit-scrollbar{
+    width: 10px;
+
+}
+::-webkit-scrollbar-track{
+    background-color: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color:darkkhaki;
+    height: 50%;
+}
+
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    object-fit: cover;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.containerBK{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem;
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+}
+#ip{
+    font-size: 3rem;
+}
+
+#coord{
+    opacity: .5;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #1e1e1e;
+    padding: .8rem;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+
+.footer a:hover{
+    color: rgb(169, 169, 169)
+}

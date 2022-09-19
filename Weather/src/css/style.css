@@ -30,7 +30,7 @@ body{
     overflow: hidden;
     max-width: 100%;
     grid-area: sidebar;
-    background-color: #ede7d9;
+    background-color: #FAF3DD;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,15 +72,14 @@ input:focus{
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    background-color: #A49694;
+    background-color: #68B0AB;
 }
 
 .card{
     height: 300px;
-    background-color: black;
+    background-color: #C8D5B9;
     border-radius: 10px;
 }
-
 
 .icon{
     max-width: 100%;

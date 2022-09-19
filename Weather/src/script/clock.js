@@ -1,6 +1,10 @@
 export class Clock{
-    constructor(time){
+    constructor(time, timeZone){
         this.timeObj = time;
+        this.hour = timeZone.getHours();
+        this.minute = timeZone.getMinutes();
+        this.second = timeZone.getSeconds();
+        
         this.init();
     }
     pad = (n) => {

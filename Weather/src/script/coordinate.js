@@ -1,13 +1,17 @@
 export async function getCoords(){
-    let position = {lat: "", lon: "", time: ""};
-    if(!navigator.geolocation){
-        console.log("no geolocation")
-        return;
-    }
-    await navigator.geolocation.getCurrentPosition((pos)=>{
-        position.lat = pos.coords.latitude;
-        position.lon = pos.coords.longitude;
-        position.time = new Date();
-    }, (err)=>{console.log(err)});
-    return await position;
+
+    return new Promise((res, rej) => {
+        if(!navigator.geolocation){
+            console.log("no geolocation");
+            rej("err")
+        }
+        navigator.geolocation.getCurrentPosition((pos) => {
+            let lat = pos.coords.latitude.toFixed(4);
+            let lon = pos.coords.longitude.toFixed(4);
+            let time = new Date();
+            res({lat, lon, time})
+        });
+    });
+    
+    
 }

@@ -9,7 +9,7 @@ export async function getCoords(){
             let lat = pos.coords.latitude.toFixed(4);
             let lon = pos.coords.longitude.toFixed(4);
             let time = new Date();
-            res({lat, lon, time})
+            res({lat, lon, time, address: ""})
         });
     });
     

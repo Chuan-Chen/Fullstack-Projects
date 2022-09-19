@@ -76,9 +76,20 @@ input:focus{
 }
 
 .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     height: 300px;
     background-color: #C8D5B9;
     border-radius: 10px;
+}
+
+.cardTitle{
+    text-align: center;
+    height: 30%;
+    font-size: 1.2rem;
 }
 
 .icon{

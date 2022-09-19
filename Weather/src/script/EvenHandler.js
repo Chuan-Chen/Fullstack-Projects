@@ -1,8 +1,8 @@
 export function init(domObjects){
     conversion(domObjects.conversion);
-    createCard(domObjects.content);
-    search(domObjects.search);
+    search(domObjects);
 }
+
 
 function conversion(conversion){
     conversion.addEventListener('click', () => {
@@ -17,16 +17,16 @@ function conversion(conversion){
     });
 }
 
-function search(search){
-    search.addEventListener('keydown', (e)=>{
-        if(e.keyCode == 13 && search.value != ""){
-            console.log(search.value);
+function search(domObjects){
+    domObjects.search.addEventListener('keydown',(e)=>{
+        if(e.keyCode == 13 && domObjects.search.value != ""){
+            createCard(domObjects.content);
         }
     });
 }
 
 
-function createCard(content){
+export function createCard(content){
     let div = document.createElement("div");
     div.classList.add("card");
     content.append(div);

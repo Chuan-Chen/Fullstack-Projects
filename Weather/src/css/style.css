@@ -67,16 +67,18 @@ input:focus{
     width: 80%;
 }
 .content{
+    padding: 1rem;
     grid-area: content;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     background-color: #A49694;
 }
 
 .card{
-    max-height: 200px;
-    max-width: 100px;
-
+    height: 300px;
+    background-color: black;
+    border-radius: 10px;
 }
 
 

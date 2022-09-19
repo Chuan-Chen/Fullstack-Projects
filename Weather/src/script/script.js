@@ -1,12 +1,10 @@
 import {Clock} from './clock';
 import {getCoords} from './coordinate'
-import {init} from './EvenHandler';
+import {init, createCard} from './EvenHandler';
 const search = document.querySelector("#search");
 const time = document.querySelector(".time");
 const content = document.querySelector(".content");
 const unit = document.querySelector(".conversion");
-
-
 
 
 

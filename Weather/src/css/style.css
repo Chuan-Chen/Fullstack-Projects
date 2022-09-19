@@ -92,6 +92,10 @@ input:focus{
     font-size: 1.2rem;
 }
 
+.card > div {
+    text-align: center;
+}
+
 .icon{
     max-width: 100%;
     width: 64px;

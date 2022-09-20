@@ -20,7 +20,6 @@ init(domObjects);
     let coords = await getCoords();
     let weather = await getWeather(unit, coords);
     //let address = await reverseAddress(coords.lat, coords.lon);
-    console.log(coords)
     coords.address = "Current Location";
     createCard(domObjects, weather, coords);
     

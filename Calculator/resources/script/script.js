@@ -137,7 +137,9 @@ function keyPress(e){
     //console.log("current: " + currentOperations)
 }
 function buttonClick(e){
-    let key = e.path[0].attributes[1].value;
+    console.log(e.target.dataset.text)
+    //e.path[0].attributes[1].value;
+    let key = e.target.dataset.text;
     if(key == "="){
         display.textContent = "";
         currentOperations = reduce(currentOperations);

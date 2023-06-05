@@ -77,8 +77,14 @@
             });
         },
         buttonClick: function(e){
-            let i = e.path[0].classList[0].charAt(1);
-            let j = e.path[0].classList[1].charAt(1);
+            //console.log(document.getElementById(e.target).innerText)
+            console.log()
+            //let i = e.path[0].classList[0].charAt(1);
+            //gets the I from the board
+            let i = e.target.className[1];
+            //gets the J from the board
+            let j = e.target.className[4];
+            //let j = e.path[0].classList[1].charAt(1);
             if(this.gameBoard[i][j].value != -1) return;
             this.playerTurn = !this.playerTurn;
             this.gameBoard[i][j].player = this.players[+ this.playerTurn];

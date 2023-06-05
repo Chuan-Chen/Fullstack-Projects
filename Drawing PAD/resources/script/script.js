@@ -3,9 +3,9 @@ let tileSize = 20;
 
 const main = document.querySelector('.container');
 const pad_size = document.querySelector('#pad-size').addEventListener("mouseup", function(e){
-    size = parseInt(e.path[0].value);
+    //size = parseInt(e.path[0].value);
+    size = parseInt(e.target.value);
     //remove();
-    //console.log(size);
     remove(main);
     update();
     
@@ -24,7 +24,6 @@ function remove(parent){
 }
 
 function changeBlock(e){
-    console.log(e.target);
     e.target.classList.add("color");
 }
 

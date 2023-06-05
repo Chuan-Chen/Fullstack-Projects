@@ -64,6 +64,7 @@ body{
     background-color: #549b9e;
     padding-left: 5px;
     padding-right: 5px;
+    cursor: pointer;
 }
 
 .tile{

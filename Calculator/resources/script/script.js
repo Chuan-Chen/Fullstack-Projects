@@ -138,7 +138,7 @@ function keyPress(e){
 }
 function buttonClick(e){
     //e.path[0].attributes[1].value;
-    let key = e.target.dataset.text;
+    let key = e.target.getAttribute("data-text")
     if(key == "="){
         display.textContent = "";
         currentOperations = reduce(currentOperations);

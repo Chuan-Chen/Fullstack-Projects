@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 body{
+    margin: 0;
+    display: grid;
+    place-self: center;
+    height: 100vh;
+    width: 100vw;
     font-family: 'Roboto Mono', monospace;
+}
+
+.gameTitle{
+    font-size: 2.5rem;
+    font-weight: 900;
+    display: grid;
+    place-self: center;
 }
 
 .gameBoard{
@@ -39,7 +51,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     width: 100%;
     padding-bottom: 15px;
@@ -112,4 +124,9 @@ input:focus{
 .player1-display, .player2-display{
     font-size: 2rem;
     font-weight: bold;
+}
+
+.currentplayer{
+    font-size: 2.2rem;
+    color: red;
 }

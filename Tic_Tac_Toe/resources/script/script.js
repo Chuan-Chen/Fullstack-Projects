@@ -43,12 +43,14 @@
             let player2Display = this.player2Display;
             let player2Score = this.player2Score
             start.children[0].children[0].addEventListener('click', function(e){
+                
                 if(player1.value != "" && player2.value != ""){
                     start.classList.add("no-display");
                     players.push({player: player1.value, score: 0, sign: playerTurn, scoreDisplay: player1Score});
-                    player1Display.textContent = player1.value;
+                    player1Display.textContent = "(X) "+ player1.value;
+                    player1Display.classList.add("currentplayer")
                     players.push({player: player2.value, score: 0, sign: !playerTurn, scoreDisplay: player2Score});
-                    player2Display.textContent = player2.value;
+                    player2Display.textContent = "(O) "+ player2.value;
                 }
             });
             player1.addEventListener("keyup", function(e){
@@ -78,22 +80,35 @@
         },
         buttonClick: function(e){
             //console.log(document.getElementById(e.target).innerText)
-            console.log()
+            console.log(e)
             //let i = e.path[0].classList[0].charAt(1);
             //gets the I from the board
             let i = e.target.className[1];
+            console.log(i)
             //gets the J from the board
             let j = e.target.className[4];
             //let j = e.path[0].classList[1].charAt(1);
             if(this.gameBoard[i][j].value != -1) return;
+            if([...this.player1Display.classList].includes("currentplayer")){
+                this.player1Display.classList.remove("currentplayer");
+                this.player2Display.classList.add("currentplayer");
+            }
+            else if([...this.player2Display.classList].includes("currentplayer")){
+                this.player2Display.classList.remove("currentplayer");
+                this.player1Display.classList.add("currentplayer");
+            }
+            
             this.playerTurn = !this.playerTurn;
             this.gameBoard[i][j].player = this.players[+ this.playerTurn];
             this.gameBoard[i][j].value = this.playerTurn;
             //console.log(i, j);
             //console.log(this.gameBoard);
+            this.render();
             if(this.checkBoard(this.gameBoard, i, j)){
                 this.players[+ this.playerTurn].score++;
-                this.resetBoard();
+                setTimeout(() => {
+                    this.resetBoard();
+                }, 100);
                 return;
             }
 
@@ -103,7 +118,10 @@
             if(this.counter == 9){
                 this.counter = 0;
                 console.clear();
-                this.resetBoard();
+                setTimeout(() => {
+                    this.resetBoard();
+                }, 100);
+                
             }
             console.log(this.counter);
         },
